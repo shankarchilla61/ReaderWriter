@@ -1,3 +1,5 @@
+# ReadWriteLocks
+
 # Custom Read-Write Lock in Java
 
 This project demonstrates a custom implementation of a read-write lock in Java using synchronization mechanisms such as ReentrantLock and mutex to manage concurrent access to a shared resource by multiple reader and writer threads.
@@ -15,7 +17,7 @@ The program creates and manages multiple reader and writer threads that interact
 
 ## Project Structure
 
-The project is organized into the following classes, each in its own file within the GUVIJAVAPROJECT package:
+The project is organized into the following classes, each in its own file within the ThreadsCheck package:
 
 1. Main: Contains the main method to start the program.
 2. ReadWriteLock: Manages the shared resource and synchronization mechanisms.
@@ -26,7 +28,8 @@ The project is organized into the following classes, each in its own file within
 
 The Main class initializes the shared variable s, takes input for the number of reader and writer threads, and creates the respective threads. It handles invalid input and coordinates the creation and execution of threads.
 
-### ReadWrite Class
+### ReadWriteLock
+ Class
 
 The ReadWrite class defines the shared variable s, locks (mutex and wrt), and methods to manage reader and writer synchronization. It includes methods to lock and unlock the write access, increment and decrement the reader count, and retrieve the shared variable's value.
 
@@ -44,14 +47,35 @@ The Writer class implements the Runnable interface for writer threads. Each writ
 2. Enter the initial value of the shared variable s.
 3. Enter the number of reader threads.
 4. Enter the number of writer threads.
-5. Follow the prompts to specify the number of  write operations for each thread.
+5. Follow the prompts to specify the number of read and write operations for each thread.
 
-##Example
+## Example
 
+![input reader and writer](https://github.com/udaarbhavana/ReadWriteLocks/assets/118459224/2a6fbbc9-689e-4c73-878f-f5a6df230135)
 
-![Screenshot (320)](https://github.com/shankarchilla61/ReaderWriter/assets/111522892/78cb7351-2777-4a37-b0e0-4cc41472f558)
-![Screenshot (321)](https://github.com/shankarchilla61/ReaderWriter/assets/111522892/aec293f7-3027-472c-b642-61d2c7c032ed)
+i. User taken the initial value od shared variable 's' as 10
+ii. User taken no. of readers is 2 as input i.e Reader 1 and Reader 2
+iii. User taken no. of writers is 2 as input i.e writer 1 and writer 2
+iv. Now READER and WRITER threads are created successfully.
 
+![writer 2](https://github.com/udaarbhavana/ReadWriteLocks/assets/118459224/d1746b59-4bd1-48a3-8947-ef4f81b32138)
+
+v. Writer 1 will wait for some random time. Then user updates wants to update 2 times.
+vi. First time 5 is added to s, then s becomes 10+5 = 15
+vii. second time 5 is added to s, then s = 15+5 = 20
+viii. Now updated s = 20
+
+![writer 1](https://github.com/udaarbhavana/ReadWriteLocks/assets/118459224/de07758b-e86a-4dac-bf3b-f620c59b6939)
+
+ix. Writer 1 has stopped writing and writer 2 starts writing.
+x. Now also user wants to update 2 times with values 5 for first time and 5 for second time.
+xi. Then updated s = 20+5+5 = 30.
+
+![reader](https://github.com/udaarbhavana/ReadWriteLocks/assets/118459224/f1045760-13c7-4e1e-a6ac-7b879a24af08)
+
+xii. Now Reader 1 and Reader 2 wait for some random times. Then R0 starts reading shared variable.
+xiii. As no writer is left, Reader 2 will start reading shared variable after reader 1 is done.
+xiv. Finally, after joining the thread, we get the shared variable value as 30.
 
 
 ## Notes
