@@ -46,59 +46,10 @@ The Writer class implements the Runnable interface for writer threads. Each writ
 4. Enter the number of writer threads.
 5. Follow the prompts to specify the number of  write operations for each thread.
 
-## Example
+##Example
+![Screenshot (320)](https://github.com/shankarchilla61/ReaderWriter/assets/111522892/78cb7351-2777-4a37-b0e0-4cc41472f558)
 
-Enter the initial value of the shared variable 's': 
-32
----------------------------------------------
-Enter the number of Readers:
-2
-Reader 0
-Reader 1
----------------------------------------------
-Enter the number of Writers:
-2
-Writer 0
-Writer 1
----------------------------------------------
---------------------------------------------------
-Writer 0 Waiting for random time between 0ns and 10ns = 7
-Enter the number of times Writer 0 wants to write:
-2
-Writer 0 is writing...
-Enter the 1th integer value to write:
-32
-Enter the 2th integer value to write:
-33
-Updated value of shared variable 's' = 97
---------------------------------------------------
---------------------------------------------------
-Writer 1 Waiting for random time between 0ns and 10ns = 0
-Enter the number of times Writer 1 wants to write:
-Writer 0 has stopped.
-2
-Writer 1 is writing...
-Enter the 1th integer value to write:
-3
-Enter the 2th integer value to write:
-3
-Updated value of shared variable 's' = 103
---------------------------------------------------
-Writer 1 has stopped.
-Reader 0 Waiting for random time between 0ns and 10ns = 3
-Reader 1 Waiting for random time between 0ns and 10ns = 9
-Reader 0 is reading...
-Reader 0 reads the shared value = 103
-Number of readers present = 2
-Reader 0 has stopped.
-Reader 1 is reading...
-Reader 1 reads the shared value = 103
-Number of readers present = 1
-Reader 1 has stopped.
--------------After joining the threads---------
-Final value of shared variable 's' = 103
-
-Process finished with exit code 0
+![Screenshot (321)](https://github.com/shankarchilla61/ReaderWriter/assets/111522892/aec293f7-3027-472c-b642-61d2c7c032ed)
 
 
 
