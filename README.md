@@ -47,8 +47,9 @@ The Writer class implements the Runnable interface for writer threads. Each writ
 5. Follow the prompts to specify the number of  write operations for each thread.
 
 ##Example
-![Screenshot (320)](https://github.com/shankarchilla61/ReaderWriter/assets/111522892/78cb7351-2777-4a37-b0e0-4cc41472f558)
 
+
+![Screenshot (320)](https://github.com/shankarchilla61/ReaderWriter/assets/111522892/78cb7351-2777-4a37-b0e0-4cc41472f558)
 ![Screenshot (321)](https://github.com/shankarchilla61/ReaderWriter/assets/111522892/aec293f7-3027-472c-b642-61d2c7c032ed)
 
 
